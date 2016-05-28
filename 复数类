@@ -1,0 +1,192 @@
+#include<iostream>
+using namespace std;
+class Complex
+{
+public:
+	Complex(double real=0.0,double imag=0.0);
+	Complex(const Complex& complex);
+	~Complex()
+	{
+		cout << "over\n";
+	}
+	Complex& operator=(const Complex& complex);
+	Complex operator+(const Complex& complex);
+	Complex operator-(const Complex& complex);
+	Complex operator*(const Complex& complex);
+	Complex operator/(const Complex& complex);
+
+	Complex& operator+=(const Complex& complex);
+	Complex& operator-=(const Complex& complex);
+	Complex& operator*=(const Complex& complex);
+	Complex& operator/=(const Complex& complex);
+
+	bool operator >(const Complex& complex);
+	bool operator >=(const Complex& complex);
+	bool operator <(const Complex& complex);
+	bool operator <=(const Complex& complex);
+	bool operator ==(const Complex& complex);
+	bool operator !=(const Complex& complex);
+private:
+	double _dReal;
+	double _dImage;
+};
+
+Complex::Complex(double real, double imag)
+{
+	_dReal = real;
+	_dImage = imag;
+}
+
+Complex::Complex(const Complex& complex)
+{
+	_dReal = complex._dReal;
+	_dImage = complex._dImage;
+}
+
+Complex& Complex::operator=(const Complex& complex)
+{
+	if (&complex != this)
+	{
+		_dReal = complex._dReal;
+		_dImage = complex._dImage;
+	}
+	return *this;
+}
+Complex Complex::operator+(const Complex& complex)
+{
+	return Complex(_dReal + complex._dReal , _dImage + complex._dImage);
+}
+
+Complex Complex::operator-(const Complex& complex)
+{
+	return Complex(_dReal - complex._dReal , _dImage - complex._dImage);
+}
+
+Complex Complex::operator*(const Complex& complex)
+{
+	return Complex(_dReal * complex._dReal , _dImage * complex._dImage);
+}
+
+Complex Complex::operator/(const Complex& complex)
+{
+	return Complex(_dReal / complex._dReal, _dImage / complex._dImage);
+}
+
+Complex& Complex::operator+=(const Complex& complex)
+{
+	_dReal = _dReal + complex._dReal;
+	_dImage=_dImage + complex._dImage;
+	return *this;
+}
+
+Complex& Complex::operator-=(const Complex& complex)
+{
+	_dReal = _dReal - complex._dReal;
+	_dImage = _dImage - complex._dImage;
+	return *this;
+}
+
+Complex& Complex::operator*=(const Complex& complex)
+{
+	_dReal = _dReal * complex._dReal;
+	_dImage = _dImage * complex._dImage;
+	return *this;
+}
+
+Complex& Complex::operator/=(const Complex& complex)
+{
+	_dReal = _dReal / complex._dReal;
+	_dImage = _dImage / complex._dImage;
+	return *this;
+}
+
+bool Complex::operator >(const Complex& complex)
+{
+	if (_dReal > complex._dReal)
+		return true;
+	else if (_dReal < complex._dReal)
+		return false;
+	else
+	{
+		if (_dImage>complex._dImage)
+			return true;
+		else
+			return false;
+	}
+}
+
+bool Complex::operator >=(const Complex& complex)
+{
+	if (_dReal > complex._dReal)
+		return true;
+	else if (_dReal < complex._dReal)
+		return false;
+	else
+	{
+		if (_dImage>=complex._dImage)
+			return true;
+		else
+			return false;
+	}
+}
+
+bool Complex::operator <(const Complex& complex)
+{
+	if (_dReal < complex._dReal)
+		return true;
+	else if (_dReal > complex._dReal)
+		return false;
+	else
+	{
+		if (_dImage<complex._dImage)
+			return true;
+		else
+			return false;
+	}
+}
+
+bool Complex::operator <=(const Complex& complex)
+{
+	if (_dReal < complex._dReal)
+		return true;
+	else if (_dReal > complex._dReal)
+		return false;
+	else
+	{
+		if (_dImage<=complex._dImage)
+			return true;
+		else
+			return false;
+	}
+}
+
+bool Complex::operator ==(const Complex& complex)
+{
+	if ((_dReal == complex._dReal) && (_dImage == complex._dImage))
+		return true;
+	else
+		return false;
+}
+
+bool Complex::operator !=(const Complex& complex)
+{
+	if ((_dReal == complex._dReal) && (_dImage == complex._dImage))
+		return false;
+	else
+		return true;
+}
+
+int main()
+{
+	Complex a(1.0, 2.0), b(3.0, 4.0), c;
+	Complex d(a);
+	c = a + b;
+	c = a - b;
+	c = a*b;
+	c = a / b;
+	a += b;
+	a -= b;
+	a *= b;
+	a /= b;
+	return 0;
+}
