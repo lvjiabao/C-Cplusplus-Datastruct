@@ -1,0 +1,25 @@
+﻿生成启动时间为 2016/6/6 19:36:57。
+     1>项目“E:\我的\程序\c++作业6-6（string类）\c++作业6-6（string类）\c++作业6-6（string类）.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         F:\软件\vs2013\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt "源.cpp"
+         源.cpp
+     1>e:\我的\程序\c++作业6-6（string类）\c++作业6-6（string类）\源.cpp(17): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 f:\软件\vs2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>e:\我的\程序\c++作业6-6（string类）\c++作业6-6（string类）\源.cpp(33): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 f:\软件\vs2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>e:\我的\程序\c++作业6-6（string类）\c++作业6-6（string类）\源.cpp(40): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 f:\软件\vs2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>e:\我的\程序\c++作业6-6（string类）\c++作业6-6（string类）\源.cpp(196): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 f:\软件\vs2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>e:\我的\程序\c++作业6-6（string类）\c++作业6-6（string类）\源.cpp(247): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 f:\软件\vs2013\vc\include\string.h(112) : 参见“strcpy”的声明
+     1>e:\我的\程序\c++作业6-6（string类）\c++作业6-6（string类）\源.cpp(305): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 f:\软件\vs2013\vc\include\string.h(112) : 参见“strcpy”的声明
+       Link:
+         F:\软件\vs2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\我的\程序\c++作业6-6（string类）\Debug\c++作业6-6（string类）.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\我的\程序\c++作业6-6（string类）\Debug\c++作业6-6（string类）.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\我的\程序\c++作业6-6（string类）\Debug\c++作业6-6（string类）.lib" /MACHINE:X86 "Debug\源.obj"
+         c++作业6-6（string类）.vcxproj -> E:\我的\程序\c++作业6-6（string类）\Debug\c++作业6-6（string类）.exe
+     1>已完成生成项目“E:\我的\程序\c++作业6-6（string类）\c++作业6-6（string类）\c++作业6-6（string类）.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.52
