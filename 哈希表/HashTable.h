@@ -1,3 +1,4 @@
+///////////////////////////å¼€æ”¾å®šå€æ³•
 #include <iostream>
 #include <string>
 #include <string.h>
@@ -111,7 +112,7 @@ public:
 	}
 
 private:
-	// ±ÕÉ¢ÁĞ/¿ª·Å¶¨Ö··¨--: ¶ş´ÎÌ½²â½â¾ö³åÍ»
+	// é—­æ•£åˆ—/å¼€æ”¾å®šå€æ³•--: äºŒæ¬¡æ¢æµ‹è§£å†³å†²çª
 	size_t HashFunci(const K &key, size_t i)
 	{
 		HashFunc func;
@@ -121,7 +122,7 @@ private:
 
 	void CheckCapacity()
 	{
-		// µ±¸ºÔØÒò×Ó(size/capacity)µ½0.7£¬Ôò½øĞĞÔöÈİ	
+		// å½“è´Ÿè½½å› å­(size/capacity)åˆ°0.7ï¼Œåˆ™è¿›è¡Œå¢å®¹	
 		if ((_capacity == 0) || (_size * 10 / _capacity == 7))
 		{
 			size_t newCapacity = 2 * _capacity;
@@ -157,7 +158,7 @@ void test()
 	ht.Print();
 
 	HashTable<std::string, std::string> dict(10);
-	dict.Insert("sort", "ÅÅĞò");
+	dict.Insert("sort", "æ’åº");
 	std::pair<std::string, std::string> *ret = dict.Find("sort");
 	if (NULL != ret)
 		std::cout << ret->second << std::endl;
