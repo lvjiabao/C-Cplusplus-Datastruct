@@ -42,7 +42,7 @@ struct HashFunc3
 {
 	static size_t BKDRHash(const char *str)
 	{
-		if (!*str)        // ÕâÊÇÓÉ±¾ÈËÌí¼Ó£¬ÒÔ±£Ö¤¿Õ×Ö·û´®·µ»Ø¹şÏ£Öµ0  
+		if (!*str)        // è¿™æ˜¯ç”±æœ¬äººæ·»åŠ ï¼Œä»¥ä¿è¯ç©ºå­—ç¬¦ä¸²è¿”å›å“ˆå¸Œå€¼0  
 			return 0;
 		register size_t hash = 1315423911;
 		while (size_t ch = (size_t)*str++)
@@ -100,6 +100,9 @@ struct HashFunc5
 		return BKDRHash(str.c_str());
 	}
 };
+//å¯ä»¥ç”¨æ¥å¤„ç†å¤§å¤šæ•°ç±»å‹ï¼Œä½†æ˜¯ä¸»è¦ç”¨æ¥å¤„ç†stringï¼Œæ‰€ä»¥è¿™é‡Œç»™äº†ç¼ºçœçš„string
+//ä¹Ÿå¯ä»¥ç”¨æ¥åˆ¤æ–­ç»“æ„ä½“ï¼Œé€‰æ‹©ç»“æ„ä½“ä¸­ä¸å®¹æ˜“å†²çªçš„å› ç´ æ¥æ¯”è¾ƒ
+//
 template<class K=string,
 class Hash1 = HashFunc1,
 class Hash2 = HashFunc2,
@@ -155,6 +158,3 @@ private:
 	bitmap _map;
 };
 
-//¿ÉÒÔÓÃÀ´´¦Àí´ó¶àÊıÀàĞÍ£¬µ«ÊÇÖ÷ÒªÓÃÀ´´¦Àístring£¬ËùÒÔÕâÀï¸øÁËÈ±Ê¡µÄstring
-//Ò²¿ÉÒÔÓÃÀ´ÅĞ¶Ï½á¹¹Ìå£¬Ñ¡Ôñ½á¹¹ÌåÖĞ²»ÈİÒ×³åÍ»µÄÒòËØÀ´±È½Ï
-//
